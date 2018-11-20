@@ -18,4 +18,7 @@ extractor.candidate_weighting()
 # (keyphrase, score) tuples
 keyphrases = extractor.get_n_best(n=10)
 
-print "keyphrases=" + str(keyphrases)
+print "Extracted themes:"
+print "===================="
+for keyphrase in keyphrases:
+    print keyphrase[0] + ", score=" + str(keyphrase[1])
